@@ -16,10 +16,10 @@ class Nothing(object):
         return self
 
     def __iter__(self, *args, **kwargs):
-        return iterator
+        return self.iterator
 
     def iter(self, *args, **kwargs):
-        return iterator
+        return self.iterator
 
 
 class Iterator(Nothing):
@@ -30,6 +30,6 @@ class Iterator(Nothing):
         raise StopIteration
 
 
-iterator = Iterator()
+Nothing.iterator = Iterator()
 nothing = Nothing()
 sys.modules['nothing'] = nothing

@@ -3,5 +3,5 @@ from setuptools import setup
 setup(
     name='nothing',
     version='0.0.1',
-    packages='nothing',
+    py_modules=['nothing'],
 )
