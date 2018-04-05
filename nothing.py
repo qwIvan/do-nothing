@@ -2,7 +2,10 @@
 import sys
 
 
-class Nothing:
+iterator = None
+
+
+class Nothing(object):
     def __call__(self, *args, **kwargs):
         return self
 
@@ -13,6 +16,9 @@ class Nothing:
         return self
 
     def __iter__(self, *args, **kwargs):
+        return iterator
+
+    def iter(self, *args, **kwargs):
         return iterator
 
 
